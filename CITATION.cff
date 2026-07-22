@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite this repository and the associated conference abstract."
+title: "AI Coding Agreement Analysis"
+authors:
+  - family-names: "YU"
+    given-names: "GONGDA"
+repository-code: "https://github.com/gongdayu/ai-coding-agreement-analysis"
+date-released: "2026-06-26"
+license: "MIT"
+preferred-citation:
+  type: article
+  title: "Human vs. AI in Conducting Scoping Reviews: Evaluating Large Language Model Accuracy Across Article and Task Type"
+  authors:
+    - family-names: "Yu"
+      given-names: "Chang"
+    - family-names: "Han"
+      given-names: "Mo"
+    - family-names: "Huang"
+      given-names: "Rui"
+    - family-names: "Grol-Prokopczyk"
+      given-names: "Hanna"
+    - family-names: "YU"
+      given-names: "GONGDA"
+  journal: "Innovation in Aging"
+  volume: 9
+  issue: "Supplement_2"
+  date-published: "2025-12-31"
+  doi: "10.1093/geroni/igaf122.2181"
+  url: "https://academic.oup.com/innovateage/article/9/Supplement_2/igaf122.2181/8410228"

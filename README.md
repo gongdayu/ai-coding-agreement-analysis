@@ -1,121 +1,53 @@
-# Public Agreement Analysis Code
+# AI-assisted review coding: RR2 reproducibility materials
 
-This repository contains the public coding workbooks and reproducible analysis
-code for the GPT-4.1 and GPT-5.4 human-vs-AI agreement analyses.
+This package separates fixed-data statistical reproduction from optional remote GPT coding. The fixed-data workflow reproduces the current 100-review analyses for GPT-4.1 Method 1, GPT-4.1 Method 2 and GPT-5.4 Method 2. No API key, Word installation, PDF collection or unpublished intermediate file is required for that workflow.
 
-Associated conference abstract:
+## Contents
 
-Chang Yu, Mo Han, Rui Huang, Hanna Grol-Prokopczyk, and GONGDA YU. "Human vs.
-AI in Conducting Scoping Reviews: Evaluating Large Language Model Accuracy
-Across Article and Task Type." Innovation in Aging, 9(Supplement_2),
-igaf122.2181. https://doi.org/10.1093/geroni/igaf122.2181
+- `data/articles.csv`: 100 renumbered article IDs and bibliographic metadata.
+- `data/coding_workbooks/`: three fixed coding tables, exported as UTF-8 CSV with unchanged GPT answer strings and the common Human reference.
+- `data/article_code_binary_datasets/`: rebuilt Method 1/2 GPT-4.1 Q1–Q4 binary tables.
+- `analysis_code/`: one analysis entry point, agreement calculations and evaluation methodology.
+- `gpt_codings/`: [independent codebook](gpt_codings/Codebook_Coding%20Questions%20Q1-Q8.docx), exact supplied prompt templates, coding scripts and reference notebooks. See its README before any remote run.
 
-## Repository Contents
+The manuscript, supplementary Word document, internal guidelines, comments, audit reports, old-ID mapping, copyrighted PDFs and extracted full texts are not part of this package. Bibliographic identifiers provide a way to obtain articles through lawful access; their full texts are not licensed by the code license.
 
-- `data/coding_workbooks/`: public human-vs-AI coding workbooks used for the
-  row-level agreement analysis.
-- `data/article_code_binary_datasets/`: public article-code binary datasets
-  used for the GPT-4.1 Q1-Q4 agreement calculations.
-- `analysis_code/`: reproducible agreement-analysis scripts and shared metric
-  utilities for generating the public manuscript tables and local audit outputs.
-- `gpt_codings/`: collaborator notebooks used to generate GPT coding outputs
-  from article PDFs.
-- `METHODOLOGY.md`: describes the binary expansion, TP/TN/FP/FN definitions,
-  metric formulas, grouping rules, and cascaded accuracy calculation.
-- `requirements.txt`: Python dependencies.
+## Install and reproduce the fixed-data analysis
 
-Generated public outputs are not committed because they can be regenerated from
-the released scripts and datasets.
+Use Python 3.12. From the package root, create a new virtual environment and install the tested dependencies. Windows PowerShell:
 
-## Data and Code Availability
-
-The public data workbooks, GPT coding notebooks, and reproducible analysis code
-are available in this repository. Generated output files are not committed
-because they can be reproduced by running the scripts below.
-
-## Setup
-
-Use Python 3.10 or newer.
-
-```bash
-pip install -r requirements.txt
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe analysis_code/run_analysis.py --out ../rr2_results
 ```
 
-## Reproduce Public Tables
+On macOS/Linux use `python3.12 -m venv .venv` and replace `.\.venv\Scripts\python.exe` with `.venv/bin/python`. Inputs are located relative to the script, not the current working directory. The output path is explicit; the same commands can be launched from another directory using absolute script and output paths.
 
-From this repository folder:
+The default run calculates all three 100-review configurations using 10,000 bootstrap replicates with seed 20261013. It writes `statistics.json`, long-form `metrics.csv`, `per_label_metrics.csv`, `ooc_summary.csv`, `out_of_codebook_audit.csv`, `analysis_input.csv`, the binary matrices and `bootstrap_indices.npy`. Table names 1–5 in `statistics.json` follow the recalculation output convention, rather than the supplementary document's table numbering.
 
-```bash
-python analysis_code/calculate_gpt41_public_tables.py
-python analysis_code/calculate_gpt54_public_tables.py
-```
+## Scope and interpretation
 
-By default, local verification outputs are written to:
+Read [`analysis_code/METHODOLOGY.md`](analysis_code/METHODOLOGY.md) for legal label pools, aggregation, eligibility, OOC handling and uncertainty. Q6 includes NA, and Q8 includes OPP. OOC labels are preserved and reported; they are not silently converted into legal answers. Method 1 downstream performance is outside the comparison. Composite F1 is a descriptive product, not cascaded accuracy.
 
-- `outputs/gpt41/`
-- `outputs/gpt54/`
+Optional new coding calls are separate from fixed-data reproduction. The supplied model identifiers specify rerun configurations; historical returned model IDs and identical text reuse across all original conditions could not be independently confirmed without request/response and cache records. New remote responses can vary with service availability and model behavior. No claim is made that rerunning GPT will reproduce every historical answer.
 
-Each script writes both an Excel workbook and separate CSV files for local
-checking. These generated outputs are excluded from version control.
+## Replacing the previous release
 
-The default outputs are generated directly from the released public datasets.
+Replace the previous release tree as a whole; copying only matching filenames would leave obsolete calculation entry points and binary data. The old Wilson-based agreement intervals, alpha-as-kappa options, old label pools and outdated binaries are not supported alternatives in this package. `analysis_code/run_analysis.py` is the sole supported statistical entry point.
 
-## Export Detailed Audit Tables
+The file names listed in the revision guidelines correspond to the following implementations in this release:
 
-To generate detailed TP/TN/FP/FN audit outputs from the released public
-datasets:
+| Listed item | Current implementation or location |
+| --- | --- |
+| `Calculate_gpt41` | `analysis_code/run_analysis.py`: GPT-4.1 Method 1 and Method 2 analyses. |
+| `Calculate_gpt54` | `analysis_code/run_analysis.py`: GPT-5.4 Method 2 analysis. |
+| `Recalculate_agreement` | `analysis_code/run_analysis.py` and `analysis_code/agreement_metrics.py`: counts, agreement metrics, bootstrap intervals and OOC summaries. |
+| `analysis_code/README` | Installation and execution instructions in this README; evaluation methods in `analysis_code/METHODOLOGY.md`. |
+| `Gitignore`, `Citation`, `License` | Repository-wide `.gitignore`, `CITATION.cff` and `LICENSE` in the package root. |
 
-```bash
-python analysis_code/recalculate_agreement_audit.py
-```
+The three calculation entry points are consolidated; their former command-line interfaces and Excel output layouts are not retained. Use the command above and the outputs described here.
 
-By default, outputs are written to:
+## Attribution
 
-```text
-outputs/audit_counts/
-```
-
-The audit output is local only and is excluded from version control.
-
-## GPT Coding Notebooks
-
-The `gpt_codings/` notebooks reproduce the GPT coding workflow. They expect
-article PDFs to be placed locally under:
-
-```text
-gpt_codings/data/pdf_to_review/
-```
-
-Before running the notebooks, set `OPENAI_API_KEY` in your environment. Do not
-hardcode API keys in notebooks or commit generated JSON/CSV outputs. The
-`gpt_codings/data/` folder and generated `.json`/`.csv` files are excluded from
-version control.
-
-## Public Output Policy
-
-The released public table scripts write the public manuscript table outputs.
-Generated output tables are not committed.
-
-TP/TN/FP/FN details are calculated by the code for auditability, but they are
-not added to the default public result tables unless they are part of the
-manuscript table format.
-
-## Method Summary
-
-For Q1-Q4, each allowed code is expanded into a binary article-code comparison
-against the human coding. GPT-4.1 Q1-Q4 uses the released article-code binary
-matrices. GPT-5.4 Q1-Q4 is expanded from the released row-level coding workbook.
-TP, TN, FP, and FN are counted across these comparisons, and retained agreement
-metrics are calculated from those counts.
-
-For Q5-Q8, each single-label question is expanded into one binary comparison per
-allowed category. Q5 is evaluated on all articles. Q6 and Q7 use articles where
-human and AI Q5 labels are both in the broad MA/SRQuan group. Q8 uses articles
-where human and AI Q5 labels are both in the broad QA/SRQual group.
-
-GPT-5.4 Q8 uses five categories: `NO`, `YES`, `OPP`, `UNC`, and `QT`.
-
-Multi-label cells may include parenthetical explanations after a leading code.
-The parser keeps the leading code and ignores parenthetical explanatory text.
-
-The scripts preserve `NA` as a valid code when reading Excel workbooks.
+The existing software LICENSE and CITATION.cff are retained from the prior public release. The citation describes the referenced conference abstract, not an assertion that the revision manuscript has been published. Third-party libraries retain their respective licenses. The code license does not confer rights to the source articles or their full text.

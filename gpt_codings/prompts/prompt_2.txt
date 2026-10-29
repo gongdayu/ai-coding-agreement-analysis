@@ -1,0 +1,101 @@
+
+<role>You are a research assistant with expertise in pain and sociology.</role>
+
+<task>
+Given the article text, your task is to read the article about pain / pain treatment carefully and determine what type of review the article is and whether it reported statistically significant findings.
+</task>
+
+<instruction>
+1. Read the article carefully, especially the title, abstract, method and finding sections.
+2. Separate the core research contents and outcomes / findings from the background introduction.
+3. Summarize the main research contents and findings.
+4. Given your summary and your knowledge of the article, determine the following components of the article:
+- 4.a). Identify the review type of this article. Pick one value from: SRQuan, SRQual, MA, QA, and strictly follow the instruction provided in <how_to_define_review_types>
+- 4.b). If the article type is SRQuan or MA, please indicate whether the findings section reports statistically significant differences in pain or pain treatment across social groups. Determine statistical significance, and strictly follow the instructions provided in <how_to_define_statistical_significance>
+- 4.c). What are the social dimension(s) associated with this pain or pain treatment outcome? Identify the key social groups being compared in the article’s findings section, and strictly follow the instructions provided in <how_to_define_key_social_groups>
+- 4.d). If the article type is SRQuan or MA, does the Findings section indicate that the lower-status group have worse pain or pain treatment outcomes? Determine lower-status group significance for the social groups identified in 4.c) , and strictly follow the instructions provided in <how_to_define_lower_status_group_significance>
+- 4.e). If the article type is QA or SRQual, did the authors assume that lower-status groups have worse pain or pain treatment outcomes, or test whether lower-status groups have worse pain or pain treatment outcomes? Distinguish between these options, selecting one value from <qualitative_assumption>
+5. Summarize the classifications and organize them as follows:
+- 5.a).	Review Type: (SRQuan, SRQual, MA, QA)
+- 5.b).	Statistical Significance: (YES, NO, MIXED, NA, QA)
+- 5.c).	Lower-Status Group Does Worse: (YESWORSE, MIXED, MIXEDOPP, MIXEDBETTER, BETTER, NODIFF, QA)
+- 5.d).	Qualitative assumption: (YES, NO, OPP, UNC, QT)
+6. Organize your answer following the format defined below in <output_format>.
+</instruction>
+
+<how_to_define_review_types>
+1. If the article demonstrates the characteristics of a systematic review (e.g., specifying what databases, search terms, and inclusion criteria were used), classify it as a systematic review, even if the authors do not explicitly label it as such. That is, we code based on what the articles actually did, rather than what the authors say or didn’t say they did.
+2. When coding this question, do not rely on the formal labels (e.g., scoping review, systematic review, narrative review) provided by the authors. Instead, strictly follow the instructions below to determine the review type. Avoid overthinking or making assumptions.
+3. Determine Review Type by answering the following questions:
+  3-1. Does the paper report using a systematic method to search the literature (e.g., searching databases like PubMed, SCOPUS, or Google Scholar with specified search terms)?  If NO, it is qualitative review and categorize it as "QA". If YES, proceed to 3-2.
+  3-2. Does the paper pool data together and conduct original statistical analyses? If YES, it is meta-analysis and categorize it as "MA". If NO, proceed to 3-3.
+  3-3. Does the paper report or discuss statistical differences (e.g., "statistical," or "p-value") between key independent variables (IVs) (i.e., social groups), even if these differences (or lack thereof) come from other studies? If YES, it is systematic statistical review and categorize it as "SRQuan". If NO, it is systematic qualitative review and categorize it into "SRQual". If the paper only discusses statistical findings from other studies (without conducting its own meta-analysis), classify it as SRQuan, not MA.
+</how_to_define_review_types>
+
+<how_to_define_statistical_significance>
+-	If Review Type is QA or SRQual, categorize as QA.
+-	If Review Type is MA or SRQuan, select code from <statistical_significance>.
+-	Do not code QA if the Review Type is MA or SRQuan.
+-	Important: If the study reports no statistically significant differences, classify Quantitative Significance as NO, even if the study is a meta-analysis (MA) or systematic quantitative review (SR Quan).
+</how_to_define_statistical_significance>
+
+<statistical_significance>
+-	YES: A group consistently and significantly has worse pain outcomes.
+-	NO: No significant differences are reported (p-value > 0.05).
+-	MIXED: Some findings show significance, others do not.
+-	NA: No statistical analysis performed.
+</statistical_significance>
+
+<how_to_define_key_social_groups>
+The following categories should be used.
+- AGE: Examines age-related differences in outcomes.
+- SEX: Examines gender or sex differences in outcomes.
+- RAC: Examines differences in outcomes by race and/or ethnicity.
+- SES: Examines differences in outcomes by socioeconomic status, e.g., by education, income, or wealth.
+- INS: Examines differences in outcomes by health insurance status (e.g., insured vs. uninsured).
+- WCG: Examines differences in outcomes by within-country geographic units (e.g., rural vs. urban).
+- CCG: Examines differences in outcomes across countries or larger (e.g., continental) geographic units.
+- OTH: Any other relevant social dimension not already specified above.
+</how_to_define_key_social_groups>
+
+<how_to_define_lower_status_group_significance>
+Determine whether Lower-Status Group Does Worse:
+1. Compare findings between lower-status groups (i.e., socially disadvantaged groups like women/females, racial/ethnic minorities, older adults, people with less education or income, people from developing countries, etc.) and higher-status groups (e.g., socially advantaged groups like men/males, whites, younger adults, people with more education or income, people from highly developed countries, etc).
+2. If multiple social groups are analyzed, assess the patterns across all groups rather than focusing on a single group.
+3. Select code from <lower_status_significance>
+4. Note that this component only applies for articles coded as “SRQuan” or “MA” for Review Type.
+</how_to_define_lower_status_group_significance>
+
+<lower_status_significance>
+- YESWORSE: The lower-status group consistently has worse pain or pain treatment outcomes than the higher-status group.
+- MIXED: Sometimes the lower-status group has worse outcomes than the higher-status group, but sometimes there is no significant difference.
+- MIXEDOPP: Sometimes the lower-status group has worse outcomes, sometimes better outcomes, and sometimes no difference. Use MIXEDOPP when the study finds both worse and better outcomes for the lower-status group, depending on the condition examined. Example: African Americans have lower prevalence of tension-type headaches (better outcome) but higher chronic migraine burden, greater pain severity, and worse treatment access (worse outcomes).
+- MIXEDBETTER: Sometimes the lower-status group has better outcomes than the higher-status group, but sometimes there is no significant difference.
+- BETTER: The lower-status group consistently has better pain outcomes than the higher-status group.
+- NODIFF: There is no significant difference between the lower-status and higher-status groups.
+- QA: Use only if Statistical  Significance is classified as QA.
+</lower_status_significance>
+
+<qualitative_assumption>
+- No: the article didn’t presume that there are differences or disparities in pain or pain treatment.
+- YES: the article presumed that lower-status group(s) have worse pain/pain treatment outcomes than higher-status groups.
+- OPP: the article presumed that lower-status group(s) have BETTER pain/pain treatment outcomes than higher-status groups.
+- UNC: unclear if the article presumed a difference or disparity.
+- QT: not applicable because the Review Type is “MA” or “SRQuan”.
+</qualitative_assumption>
+
+<output_format>
+Save your output in JSON with the following format:
+{
+  "review_type": "select one value from SRQuan, SRQual, MA, QA",
+  "statistical_significance": "select one value from YES, NO, MIXED, NA, QA",
+  "lower_status_significance": "select one value from YESWORSE, MIXED, MIXEDOPP, MIXEDBETTER, BETTER, NODIFF, QA",
+  "qualitative_assumption": "select one value from YES, NO, OPP, UNC, QT",
+}
+</output_format>
+
+<article_to_analyze>
+{pdf_text}
+</article_to_analyze>
+
+Your research outcomes in JSON:

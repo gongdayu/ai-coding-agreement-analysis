@@ -1,0 +1,101 @@
+Article Number,Q1_Human,Q1_GPT,Q2_Human,Q2_GPT,Q3_Human,Q3_GPT,Q4_Human,Q4_GPT,Q5_Human,Q5_GPT,Q6_Human,Q6_GPT,Q7_Human,Q7_GPT,Q8_Human,Q8_GPT
+1,CA,CA,INT,INT,SEX,SEX,NA,NA,MA,MA,NO,NO,NODIFF,NODIFF,QT,QT
+2,"PG, AE, CS, CG","AE, CG, PS","PR, INT","TH, OT, INC, INT, PR",SEX,SEX,"BH, BN, PS","BH, BO, BN",QA,QA,QA,QA,QA,QA,YES,YES
+3,PS,PS,PR,PR,SES,SES,"SC, EN",SC,MA,MA,MIXED,YES,MIXED,YESWORSE,QT,QT
+4,"AE, AG, CG, PG, SU","AE, CG, SU, PS","INC, PR, TH, INT","TH, PR, INT, INC, OT",SEX,SEX,"BG, BH, BO, SC","SC, BH, BG",QA,QA,QA,QA,QA,QA,YES,YES
+5,TM,TM,"RX, DO","RX, OT, DO",RAC,RAC,"SC, PF, HS",PF,SRQual,SRQuan,QA,MIXED,QA,MIXED,YES,QT
+6,"AG, CA, CG, PG, TM","CA, CS, TM, CG, PS","INT, DU, FN, RX, DO, SP, TT (religion, herbal remedies, vitamins, physical therapy, etc.), OT (pain assessment)","OT, INT, FN, RX, SP",RAC,RAC,"BG, SC, PS, PF, HS","SC, PS, PF, HS, EN",SRQual,SRQuan,QA,MIXED,QA,MIXEDOPP,YES,QT
+7,PS,PS,PR,PR,SEX,SEX,"BH, SC, PS",BH,MA,MA,YES,YES,YESWORSE,YESWORSE,QT,QT
+8,TM,"TM, CG","RX, DO, FN, INT, TT (folk remedies; medications available in Latin American but not US), OT (pain assessment).","TT, RX, OT",RAC,RAC,"SC, PF, HS","SC, PF, PS, OT",QA,QA,QA,QA,QA,QA,UNC,YES
+9,PS,"PS, TR",PR,"PR, OT, INT",SEX,SEX,"BH, BN",BH,SRQual,SRQuan,QA,YES,QA,YESWORSE,YES,QT
+10,TM,TM,OT(perceived barrier),OT,CCG,CCG,"SC, PF",SC,MA,MA,MIXED,YES,YESWORSE,YESWORSE,QT,QT
+11,"PS, TR",TR,FN,"FN, OT",SEX,SEX,"SC, PS, OT(family factors, interpersonal interaction)",SC,SRQual,SRQual,QA,QA,QA,QA,NO,YES
+12,CG,CG,"FN, OT (measures of coping strategy via CSQ, CSQ-CAT, EAC etc.)","OT, FN",SEX,SEX,"BH, SC, PS, OT(methodological artifacts)","SC, OT, PS",SRQuan,SRQuan,MIXED,MIXED,MIXED,MIXEDOPP,QT,QT
+13,CG,CG,PR,PR,CCG,"OTH, CCG, SEX",SC,"HS, SC, OT",SRQuan,SRQuan,MIXED,MIXED,MIXEDOPP,MIXEDOPP,QT,QT
+14,TM,TM,"DO, OT (pain assessment)","OT, RX",RAC,RAC,"SC, PF, HS","SC, PF, EN",SRQuan,SRQuan,YES,MIXED,YESWORSE,MIXED,QT,QT
+15,PS,PS,PR,PR,AGE,AGE,"SC, BO",SC,SRQuan,SRQuan,MIXED,NO,MIXEDBETTER,BETTER,QT,QT
+16,CS,"CS, TM","FN, OT (sexuality, emotional distress, coping and self-management strategies)","OT, TT",SEX,SEX,OT(methodological artifacts),"SC, OT",SRQual,SRQuan,QA,MIXED,QA,MIXEDOPP,NO,QT
+17,"AE, AG, CG, PG,TM","CG, AE, CS, TM","PR, TH, INT, FN, RX, TT (cultural remedies); OT (coping strategy)","PR, INT, OT, FN, TT, RX",RAC,"RAC, OTH, INS","SC, PS, PF, HS, OT(acculturation, language barrier)","SC, HS, PF",SRQual,SRQuan,QA,MIXED,QA,MIXEDOPP,YES,QT
+18,AE,AE,"TH, INT","TH, OT",SEX,SEX,"BN, BO, SC, PS, OT(methodological artifacts)",PS,SRQuan,QA,YES,QA,YESWORSE,QA,QT,YES
+19,"CA, TM, TR","TM, CA","PR, INT, DO, OT (pain assessment)","OT, INT",RAC,RAC,"SC, OT(language barrier, SES)","PF, HS, SC",SRQuan,SRQuan,YES,MIXED,YESWORSE,YESWORSE,QT,QT
+20,"CS, AS, TM","PS, CS, TM",PR,"PR, OT, RX","SEX, RAC","RAC, SEX, OTH","SC, PF, HS, OT(language barriers, immigrant status, SES)","SC, OT, HS, PF",SRQuan,SRQuan,YES,MIXED,MIXEDOPP,MIXEDOPP,QT,QT
+21,CS,CS,"INT, FN, PR","PR, FN, INT, OT","SES, WCG","SES, WCG, RAC","SC, PS, HS, EN","SC, EN, BO, PS",QA,QA,QA,QA,QA,QA,UNC,YES
+22,CG,"CG, TM","INC, PR, INT, FN, RX","INT, FN, OT, RX, PR","RAC, SES, INS, WCG","WCG, SES, RAC","SC, PS, PF, HS, EN","PS, EN, SC, HS, PF",QA,QA,QA,QA,QA,QA,YES,YES
+23,TM,"TM, TR",RX,"RX, OT",CCG,"CCG, RAC, SES, OTH","PS, PF, HS","HS, PF, EN, PS",QA,QA,QA,QA,QA,QA,UNC,YES
+24,"CS, TR","CS, TM, TR","PR, TH, INT","PR, TH, FN, RX, TT, OT",SEX,"SEX, OTH",BH,"BH, PS, PF",SRQual,SRQuan,QA,MIXED,QA,MIXEDOPP,NO,QT
+25,TM,PG,OT (coping strategies),OT,RAC,"RAC, AGE","SC, PF","PS, SC, PF",MA,MA,MIXED,YES,MIXEDOPP,YESWORSE,QT,QT
+26,"TM, TR","TM, TR","INT, TT (multidisciplinary pain programs), OT (the suitability of cognitive–behavioral therapy and biofeedback training)","OT, INT",AGE,AGE,HS,"PF, SC, BO",QA,QA,QA,QA,QA,QA,NO,YES
+27,PG,"AE, AG, PG, SU","TH, INT","INT, OT",SEX,"SEX, CCG","BO, SC, PF","PS, SC",QA,SRQuan,QA,MIXED,QA,MIXED,NO,QT
+28,"AE, CG, TR","CG, AE, PG","PR, TH","PR, TH, OT",SEX,SEX,"BG, BH, BN, BO, SC, PS","SC, BH, BN",QA,QA,QA,QA,QA,QA,YES,YES
+29,"CG, TM","CG, AE, TM","TH, PR","PR, FN, TH, OT, RX",AGE,"AGE, OTH","BN, PS, PF, HS, SC","BO, PS, BN, SC, PF, HS",QA,QA,QA,QA,QA,QA,YES,UNC
+30,"AG, CG","PG, TM","TH, INT","OT, TT",RAC,"RAC, OTH","SC, PF","SC, HS",SRQual,SRQual,QA,QA,QA,QA,YES,YES
+31,"AE, AG, CG, PG, TR","AE, TR","PR, TH, RX, DO","INT, OT, RX",SEX,SEX,"BG, BH, BN, SC, PS, PF","BO, PS, BH, BN, BG",QA,QA,QA,QA,QA,QA,YES,YES
+32,SU,"SU, TR","PR, INT, DU","INT, PR, OT",SEX,SEX,"BH, BN, SC","SC, BN, PS, BH",QA,SRQuan,QA,MIXED,QA,MIXEDOPP,NO,QT
+33,AE,AE,"TH, INT, OT(nociceptive reflex)","INT, TH, OT",SEX,SEX,OT(methodological artifacts),"BH, BN, OT",SRQuan,SRQuan,MIXED,MIXED,MIXEDOPP,MIXEDOPP,QT,QT
+34,AE,AE,"TH, INT","TH, INT, OT",RAC,RAC,"BG, BH, PS, EN, SC, OT(methodological artifacts)","SC, PS",MA,MA,MIXED,MIXED,MIXED,MIXEDOPP,QT,QT
+35,"CA, TR",TR,"INT, OT (non-pharmacological intervention)","INT, OT",RAC,"RAC, OTH","SC, HS, PF, OT(methodological artifacts)","HS, SC, OT",MA,MA,NO,NO,NODIFF,NODIFF,QT,QT
+36,CS,CG,PR,PR,"AGE, SEX, CCG","OTH, SEX, AGE, CCG","SC, EN, OT(methodological artifacts)",SC,MA,MA,MIXED,MIXED,MIXED,MIXED,QT,QT
+37,PS,PS,PR,"OT, PR","AGE, SEX, SES","OTH, AGE, SES, SEX",BO,"BO, EN",SRQuan,SRQuan,MIXED,NA,MIXEDOPP,YESWORSE,QT,QT
+38,PS,"PS, TM",PR,"PR, OT","AGE, SEX","SEX, AGE, SES",NA,"BH, PF, HS, OT",MA,SRQuan,YES,YES,YESWORSE,MIXEDOPP,QT,QT
+39,"CS, TM",TM,"SP, TT (allied health services, complementary and alternative therapies), OT (access to self-management education and conservative management)","TT, RX, SP, OT","SES, INS",SES,"SC, PS, PF, HS","SC, HS",SRQual,SRQuan,QA,MIXED,QA,MIXEDOPP,YES,QT
+40,AE,AE,"TH, INT","TH, INT",SEX,OTH,"BH, BO, SC",SC,MA,MA,YES,YES,YESWORSE,YESWORSE,QT,QT
+41,CS,CS,PR,"PR, OT","AGE, SEX, CCG","OTH, SEX, CCG","SC, OT(different diagnostic criteria)",SC,MA,MA,MIXED,MIXED,MIXED,MIXED,QT,QT
+42,AE,AE,TH,TH,AGE,AGE,BN,"BN, BO",MA,MA,MIXED,MIXED,MIXEDOPP,MIXEDOPP,QT,QT
+43,CS,CS,"INC, PR, INT, FN","PR, INC, OT",RAC,"RAC, SEX","BG, EN, OT(methodological artifacts; assessment tool)","BG, BH, EN",SRQual,SRQuan,QA,YES,QA,YESWORSE,YES,QT
+44,TM,"TM, TR","RX, DO","OT, RX, INT","SEX, RAC","SEX, RAC","PF, HS",PF,SRQuan,SRQuan,NO,MIXED,NODIFF,MIXEDOPP,QT,QT
+45,"PG, AE, TR","PG, AE, SU, TR","INC, PR, TH, INT, DU","PR, TH, INT, TT, RX, OT",SEX,"SEX, OTH","BO, SC, PS, BG, OT(coping)","SC, BG, OT, BN, BH, PS",SRQual,SRQuan,QA,MIXED,QA,MIXEDOPP,NO,QT
+46,CG,CG,"PR, FN","PR, INT, FN, OT","AGE, SEX, SES, WCG, CCG","SEX, AGE, OTH, SES","SC,PS, EN, OT(methodological artifacts)","PS, BN, EN",SRQual,SRQuan,QA,MIXED,QA,MIXEDOPP,UNC,QT
+47,"CS, TM","PS, TM","PR, INC, DU",OT,SEX,SEX,"BH, SC","BH, BO, SC, PF",SRQuan,SRQuan,MIXED,MIXED,MIXEDOPP,MIXEDOPP,QT,QT
+48,"CA, TM, TR",TM,"RX, DO",OT,"AGE, SEX","AGE, SEX",NA,BO,SRQual,SRQual,QA,QA,QA,QA,UNC,YES
+49,CG,"CG, TR, TM","OT(healthcare seeking, pain behaviors)","INT, OT, RX",RAC,"RAC, SES, CCG","SC, PF, HS, PS","PS, SC, PF, HS, EN",SRQual,SRQual,QA,QA,QA,QA,NO,YES
+50,"AE, AG","AE, AS","TH, INT","TH, OT","SEX, AGE","SEX, OTH",NA,"BN, BO",SRQuan,SRQuan,MIXED,MIXED,MIXEDBETTER,MIXEDOPP,QT,QT
+51,AS,AS,OT(time taken to seek medical care for chest pain),"OT, DU",RAC,RAC,SC,SC,SRQuan,SRQuan,YES,MIXED,YESWORSE,MIXED,QT,QT
+52,AS,PS,INC,INC,SEX,SEX,"BH, BN, BO, PS, SC",BH,MA,MA,YES,YES,YESWORSE,YESWORSE,QT,QT
+53,CG,"CG, TM","PR, INT","PR, INT, OT, DU, RX","SEX, RAC, SES, WCG","SES, SEX, RAC, WCG","SC, PS, EN, OT(life course factors/adversities)","SC, BH, EN, HS, PS",SRQual,SRQuan,QA,MIXED,QA,YESWORSE,YES,QT
+54,CS,CS,"PR, OT(clinical presentation)","PR, OT",RAC,RAC,SC,"PF, BO, SC, HS",MA,MA,MIXED,MIXED,MIXEDOPP,MIXEDOPP,QT,QT
+55,CG,"TM, CG",OT(self-management and resilience),"TT, OT, INT, FN","RAC, OTH(immigration status)","RAC, OTH, AGE",SC,"SC, PS",SRQual,SRQual,QA,QA,QA,QA,UNC,YES
+56,PS,"PG, PS",PR,"PR, OT",CCG,CCG,"SC, EN, OT(methodological artifacts)","SC, OT(methodological heterogeneity/non-comparable measurement across studies), EN",SRQual,SRQual,QA,QA,QA,QA,NO,UNC
+57,"PG, TM","PG, TM","INT, OT (waiting time)","INT, OT",RAC,RAC,"SC, PF, EN","SC, PF",SRQual,SRQuan,QA,MIXED,QA,MIXEDOPP,YES,QT
+58,"AG, TM",TM,RX,RX,RAC,RAC,"SC, PF","PF, HS",MA,MA,YES,MIXED,YESWORSE,MIXED,QT,QT
+59,"CS, TM",CS,INT,OT,"RAC, CCG","RAC, CCG","SC, PS","SC, PS, SES",SRQuan,SRQuan,MIXED,YES,MIXEDOPP,YESWORSE,QT,QT
+60,CS,PS,"INC, PR","PR, OT","AGE, SEX","OTH, SEX","BH, PS","BH, OT, PS",SRQuan,SRQuan,MIXED,MIXED,MIXED,MIXED,QT,QT
+61, TM,TM,"RX, OT (providers' decision on pain treatment)","RX, OT",RAC,RAC,PF,"PF, BG",SRQuan,SRQuan,YES,YES,YESWORSE,YESWORSE,QT,QT
+62,AE,CS,TH,TH,"AGE, SEX","OTH, SEX, AGE","BO, SC",BN,MA,MA,MIXED,MIXED,MIXEDOPP,MIXED,QT,QT
+63,AE,AE,"TH, INT",INT,AGE,AGE,"BO, OT(methodological artifacts)","BN, PS",MA,MA,YES,YES,YESWORSE,YESWORSE,QT,QT
+64,PS,PS,"INC, PR","PR, OT","AGE, SEX","OTH, SEX, AGE","BH, SC, OT(methodological artifacts)","BH, OT",SRQuan,SRQuan,YES,MIXED,MIXEDOPP,MIXED,QT,QT
+65,CS,CS,PR,PR,"AGE, SEX, WCG","OTH, AGE, SEX, WCG","BH, BO, EN","SC, BO, BH, HS",MA,MA,MIXED,MIXED,MIXED,MIXED,QT,QT
+66,"CS, CG, TR","CS, TR","INC, DU",OT,SEX,SEX,"BG, BH, BN","BO, BG, BH, BN",QA,QA,QA,QA,QA,QA,YES,YES
+67,TM,TM,"PR, TT(CAM including mind-body therapy, energy therapy, natural products)","TT, OT","RAC, SES","RAC, SES, OTH","EN, OT(methodological artifacts)","HS, SC",SRQuan,SRQuan,MIXED,MIXED,MIXEDOPP,MIXEDOPP,QT,QT
+68,"AE, CS, TR","TM, AE, TR","PR, TH, INT","OT, INT",SEX,SEX,"BG, BH, BN, BO, PS, EN","EN, BO, BN, BG",QA,QA,QA,QA,QA,QA,YES,YES
+69,AE,AE,TH,"TH, OT",SEX,SEX,SC,SC,SRQuan,SRQuan,YES,YES,YESWORSE,YESWORSE,QT,QT
+70,CS,"PG, PS",PR,OT,SES,"SES, SEX",NA,"SC, HS",MA,MA,MIXED,MIXED,MIXED,MIXEDOPP,QT,QT
+71,"PS,TR","CS, PS, TR","INC, DU, DO","PR, OT, DU",CCG,"SEX, CCG","BG, SC, EN","SC, EN, HS, BG",QA,QA,QA,QA,QA,QA,NO,UNC
+72,CS,"CS, PS, TM",INT,"PR, TT, OT","SEX, AGE","SEX, OTH, AGE",BH,"BH, BO",QA,QA,QA,QA,QA,QA,YES,YES
+73,"CS, TR","CS, TR","PR, INT, FN, OT(drug efficacy, delay in diagnosis)","INT, PR, OT",SEX,SEX,"BG, BH, BO, PF","BH, BO, PF, BG, BN, SC",QA,QA,QA,QA,QA,QA,NO,YES
+74,CG,"CG, CS","OT(Measures of Pain Beliefs, Coping, and Catastrophizing Used)",OT,"CCG, RAC","CCG, OTH","SC, HS, PF, EN","SC, PF, HS",SRQuan,SRQuan,MIXED,MIXED,MIXEDOPP,MIXEDOPP,QT,QT
+75,CS,CS,PR,OT,SES,"SES, SEX, OTH",NA,"OT, SC",MA,MA,YES,MIXED,YESWORSE,MIXEDOPP,QT,QT
+76,"CG, TM","TM, TR", OT(quality of pain mgmt; therapeutic rel'p w/physiotherapist),"OT, TT",RAC,"OTH, SEX, INS","SC, PF, HS","HS, SC, PF",SRQual,SRQual,QA,QA,QA,QA,YES,YES
+77,"CS, TR","CS, TR",OT(time to care-seeking; treatment options),"FN, OT, TT",SEX,SEX,"SC, PS","SC, PS",SRQual,SRQuan,QA,MIXED,QA,MIXEDOPP,NO,QT
+78,TM,TM,OT(Access to treatment),OT,"AGE, WCG","WCG, OTH, SES",EN,"HS, BO, SC, EN",SRQual,SRQual,QA,QA,QA,QA,YES,YES
+79,CS,"CS, TM","PR, INC, FN","PR, OT, FN",SEX,"SEX, SES",NA,"SC, BH, HS, BO",SRQuan,SRQuan,YES,MIXED,YESWORSE,YESWORSE,QT,QT
+80,"CS, TM","TR, CS, TM","INT, FN, RX","INT, RX, OT, FN, SP",RAC,"RAC, SES",PF,"PS, PF, SC",SRQual,SRQuan,QA,MIXED,QA,MIXEDOPP,YES,QT
+81,CS,PS,PR,OT,SEX,"SEX, OTH, AGE",SC,"SC, BO",SRQuan,SRQuan,YES,MIXED,BETTER,BETTER,QT,QT
+82,"CS, CG, PS, PG, SU","PG, PS, TR, CS","INC, PR, TH, INT, FN ","TH, PR, OT, INT",SEX,"SEX, OTH","BG, BH, BN, PS","BH, PS",QA,QA,QA,QA,QA,QA,YES,YES
+83,"CS, CG, TR","CG, TR","TH, RX","TH, OT",SEX,SEX,"BG, BH, BN","BH, BN, BO",QA,QA,QA,QA,QA,QA,YES,YES
+84,TM,TM,"RX, SP","OT, RX, SP",RAC,RAC,"PF, OT(patient's agency)","PF, HS",MA,MA,YES,MIXED,YESWORSE,MIXEDBETTER,QT,QT
+85,"TR, CS","CS, TR","PR, INT, DU, FN","OT, INT",SEX,SEX,"BG, BH, BN, SC","BO, SC, PS",SRQuan,SRQuan,MIXED,MIXED,MIXEDOPP,MIXEDOPP,QT,QT
+86,CS,CS,"PR, TH, INT, DU, FN, OT (coping and number of pain points/locations)","PR, OT, INT",SEX,"SEX, OTH","BG, BH, BN, BO, SC, PS, EN","BH, SC, PS, PF",SRQual,SRQuan,QA,MIXED,QA,MIXEDOPP,YES,QT
+87,CS,"PS, TM, TR","INC, PR","PR, SP, OT",RAC,RAC,"PF, HS","EN, HS, PF",SRQuan,SRQuan,MIXED,NA,MIXED,YESWORSE,QT,QT
+88,PG,PG,"PR, INT","PR, INT",SEX,SEX,"BG, BH, BN, SC","BO, BN",MA,MA,YES,YES,YESWORSE,YESWORSE,QT,QT
+89,PS,PS,PR,PR,SES,SES,"PS, SC, HS",PS,MA,MA,YES,YES,YESWORSE,YESWORSE,QT,QT
+90,"AE, CG","AE, CG, CS, PG","PR, INT, INC, TH","TH, PR, OT, INT, FN","AGE, SEX","AGE, SEX, OTH","BH, BN, PS, SC, EN, OT(methodological artifacts)","BO, BH, BN, PS, SC, OT",QA,QA,QA,QA,QA,QA,NO,UNC
+91,TM,"TM, CG, CS, SU, AE, CA","RX, OT (pain assessment)","RX, PR, FN, INT, OT, SP, TT","AGE, SEX, RAC, SES, WCG, OTH(sexual identity)","RAC, OTH, SEX, SES, AGE, WCG","BH, SC, PF, EN, PS","PF, EN, PS, BO, HS, SC",QA,QA,QA,QA,QA,QA,YES,YES
+92,"PS, TR",TR,OT(treatment response),"INT, TT",AGE,AGE,NA,OT,MA,MA,YES,NO,BETTER,NODIFF,QT,QT
+93,"AE, PG, TM","CG, CS, AE, TM","TH, RX, DO, FN, OT(temporal summation, pain assessment)","INT, OT, FN, TH, PR, RX, DO",RAC,"RAC, SES","BG, PS, PF, EN","PS, SC, BN, SES, BO, BG, PF",QA,QA,QA,QA,QA,QA,YES,YES
+94,TM,"TM, TR","RX, TT (regional analgesia, multimodal adjunctive analgesia)","TT, RX, OT",CCG,CCG,EN,"HS, EN",QA,QA,QA,QA,QA,QA,YES,YES
+95,"PG, TM","CS, TM","PR, INT, FN, RX, DO, OT(pain assessment)","INT, RX, FN, OT",RAC,RAC,"SC, PS, PF, HS, EN, BO, OT(biomedical distrust)","EN, PF, PS",SRQual,SRQuan,QA,MIXED,QA,MIXED,YES,QT
+96,TM,TM,"RX, OT (diagnosis)","OT, TT, RX",CCG,"CCG, WCG, OTH, SEX, AGE, SES","HS, EN","HS, BO, BH, PF",QA,QA,QA,QA,QA,QA,YES,YES
+97,CS,CS,PR,"PR, OT",SEX,"OTH, SEX",BO,BO,MA,MA,YES,YES,YESWORSE,YESWORSE,QT,QT
+98,"AE, TM, TR","AG, TM, PG","TH, INT, DO, OT (pain belief, pain coping)","OT, RX",RAC,RAC,"BG, BN, SC, HS","SC, PF",QA,QA,QA,QA,QA,QA,YES,YES
+99,CS,CS,INT,"OT, INT",SEX,SEX,"SC, OT(methodological artifacts)","BO, SC",SRQuan,SRQuan,MIXED,MIXED,MIXEDOPP,MIXEDOPP,QT,QT
+100,"CS, TM",TM,"FN, RX","RX, OT","RAC, SES, WCG",SES,EN,"HS, OT",SRQual,SRQuan,QA,MIXED,QA,MIXEDOPP,YES,QT

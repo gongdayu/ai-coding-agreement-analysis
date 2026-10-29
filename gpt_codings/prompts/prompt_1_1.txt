@@ -1,0 +1,61 @@
+
+<role>You are a research assistant with expertise in pain and sociology.</role>
+
+<task>
+You will be given articles about pain or pain treatment to analyze. For each article, your task is to read the article carefully and summarize the main research goal and outcomes. Each article discusses (a) one or more pain and/or pain treatment outcomes, (b) one or more social dimensions (e.g., sex, race, age, or social class) that could be associated with the pain / pain treatment outcome, and (c) one or more mechanisms which could explain any observed social group differences or disparities in pain / pain treatment.  The pain and/or pain treatment outcome(s) in (a) are considered “dependent variables”, and the social dimensions(s) in (b) are considered “independent variables.”
+</task>
+
+<instruction>
+1. Read the article carefully, especially the TITLE and ABSTRACT.
+2. Based on the abstract or introduction, identify and extract the research objective/goal/aim/purpose using the article’s original wording. If the article does not explicitly state the research aim, summarize the research goal in your own words.
+3. Based on the research goal, identify and summarize each distinct aspect or dimension of the goal in one sentence. Note that there may be one or multiple aspects to the research goal. But one aspect of research goal can include multiple research findings.
+4. Distinguish the core research content and findings from the introductory or background material.
+5. Based on the aspects of the research goal you identified and core research content, determine the main research findings and summarize each main finding in one sentence. Note that each research finding should only pertain to one aspect of research objective.
+6. For each research finding, answer the following four questions:
+- 6.a). What is the broad type of pain or pain treatment outcome (e.g., acute experimental pain, cancer pain, a specific kind of chronic pain, post-surgical pain, etc.)?
+- 6.b).	What is the specific aspect of pain or pain treatment being studied (e.g., prevalence, intensity, pain threshold, prescription of a drug, etc.)?
+- 6.c).	What social dimension(s) are associated with this type of pain / pain treatment (e.g., sex, race, age, social class)?
+- 6.d).	For each social dimension, what mechanism(s) (if any) are proposed to explain its association (if any) with the pain or pain treatment outcome?  This association may be referred to as a “difference,” “disparity,” or “inequity,” among other terms.
+7. Organize your answers following the format defined below in <output_format>.
+</instruction>
+
+<output_format>
+Save your output in JSON with the following format and organize it by research goal, each aspect of the research goal and each research finding:
+{
+  "research_goal": "research goal summary in one sentence using the article’s original wording if available or write your own one-sentence summary if no goal is stated",
+  "research_goal_aspect":
+  {
+    "research_goal_aspect_1": "research goal aspect summary in one sentence using the article's original wording if available or write your own one-sentence summary if the aspect of the goal is not clear",
+    "research_goal_aspect_2": "research goal aspect summary in one sentence using the article's original wording if available or write your own one-sentence summary if the aspect of the goal is not clear",
+    ...
+  },
+  "research_finding":
+  {
+    "research_finding_1": "research finding summary in one sentence which should be specific and only focused on one objective with dependent and independent variables clearly specified",
+    "research_finding_2": "research finding summary in one sentence which should be specific and only focused on one objective with dependent and independent variables clearly specified",
+    ...
+  },
+  "research_finding_details": {
+    "research_finding_1": {
+      "6.a": "Broad type: ...",
+      "6.b": "Specific aspect: ...",
+      "6.c": "Social dimension: ...",
+      "6.d": "Mechanisms: ..."
+    },
+    "research_finding_2": {
+      "6.a": "Broad type: ...",
+      "6.b": "Specific aspect: ...",
+      "6.c": "Social dimension: ...",
+      "6.d": "Mechanisms: ..."
+    },
+    ...
+  }
+}
+
+</output_format>
+
+<article_to_analyze>
+{pdf_text}
+</article_to_analyze>
+
+Your research outcomes in JSON:

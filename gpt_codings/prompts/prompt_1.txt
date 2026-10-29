@@ -1,0 +1,112 @@
+
+<role>You are a research assistant with expertise in pain and sociology.</role>
+
+<task>
+You will be given articles about pain or pain treatment to analyze. For each article, your task is to read the article carefully and summarize the main research questions and outcomes. Each article discusses (a) one or more pain and/or pain treatment outcomes, (b) one or more social dimensions (e.g., sex, race, age, or social class) that could be associated with the pain / pain treatment outcome, and (c) one or more mechanisms which could explain any observed social group differences or disparities in pain / pain treatment.  The pain and/or pain treatment outcome(s) in (a) are considered “dependent variables”, and the social dimensions(s) in (b) are considered “independent variables.”
+</task>
+
+<instruction>
+1. Read the article carefully, especially the TITLE and ABSTRACT.
+2. Based on the abstract or introduction, identify and extract the research objective/goal/aim/purpose using the article’s original wording. If the article does not explicitly state the research aim, summarize the research goal in your own words.
+3. Distinguish the core research content and findings from the introductory or background material.
+4. Based on the aspects of the research goal you identified and core research content, determine the main research findings and summarize each main finding in one sentence. Note that each research finding should only pertain to one aspect of research objective.
+5. For each research finding, answer the following four questions:
+- 5.a). What is the broad type of pain or pain treatment outcome (e.g., acute experimental pain, cancer pain, a specific kind of chronic pain, post-surgical pain, etc.)?
+- 5.b).	What is the specific aspect of pain or pain treatment being studied (e.g., prevalence, intensity, pain threshold, prescription of a drug, etc.)?
+- 5.c).	What social dimension(s) are associated with this type of pain / pain treatment (e.g., sex, race, age, social class)?
+- 5.d).	For each social dimension, what mechanism(s) (if any) are proposed to explain its association (if any) with the pain or pain treatment outcome?  This association may be referred to as a “difference,” “disparity,” or “inequity,” among other terms.
+6. For each of the four items identified for each research finding (described just above), select the most relevant pre-specified category or categories:
+- 6.a).	For the pain or pain treatment identified in 5.a), select the most relevant category or categories from <pain_or_treatment_types>; refer <notes_for_pain_or_treatment_types> for important notes
+- 6.b).	For the specific aspect of pain or pain treatment identified in 5.b), select the most relevant category or categories from <aspect_types>
+- 6.c).	For the social dimension(s) identified in 5.c), select the most relevant category or categories from <social_dimensions_types>
+- 6.d).	For the mechanism(s) proposed to explain social group differences or disparities in pain or pain treatment identified in 5.d), select the most relevant category or categories from <mechanism_types>
+7. Organize your answers following the format defined below in <output_format>.
+</instruction>
+
+<pain_or_treatment_types>
+- AE: Acute experimental pain (e.g., laboratory studies with humans or with animals like mice or rats examining responses to induced pain, including pain tolerance and pain thresholds).
+- AS: Specific acute pain (non-experimental, with a specific type or location, e.g., acute back pain).
+- AG: General acute pain (no specific type mentioned, e.g., simply “acute pain”).
+- CA: Cancer pain (specific or general, e.g., lung cancer pain, general cancer-related pain or disease-specific pain).
+- CS: Chronic specific pain (refers to chronic pain associated with specific conditions, such as fibromyalgia, chronic low back pain, or irritable bowel syndrome (IBS), where the pain is long-term and linked to a known underlying medical condition).
+- CG: Chronic general pain (refers to long-term, persistent pain without a specific type identified, often broadly described as "chronic pain" without a clear underlying condition or precise localization).
+- PS: Specific pain (refers to pain that is specific to a particular body part or condition but is not explicitly classified as chronic or acute. For example, conditions without clear classification as chronic or acute, such as low back pain, temporomandibular disorders (TMD), migraine).
+- PG: General pain (refers to unspecified pain without detailed characterization, often described simply as "pain" without specifying whether it is chronic, acute, or related to a specific type.).
+- SU: Post-surgical pain (e.g., postoperative pain).
+- TM: Pain treatment (refers to methods for diagnosing, managing, and coping strategies, including surgery, medication, and other therapeutic approaches).
+- TR: Treatment response (refers to the outcomes or effectiveness of pain management strategies, including the degree of symptom relief, functional improvement, and overall impact of treatments such as medication, physical therapy, or surgical interventions. In some lab articles, if they mention different reactions of mice for some stimuli, TR should also be included.)
+</pain_or_treatment_types>
+
+<notes_for_pain_or_treatment_types>
+a. Always base your decision on the stated research goal. For example, you can only select TM or TR or both if the research goal mentions they aim to examine social group differences in pain management, diagnosis, coping strategies, medications, interventions, or surgery. Otherwise, if they only mention this in the research finding, do not select TM or TR.
+b. Never infer a code based on disease population or sample context if it is not named in the aim or finding sentence. Do not overthink or guess about chronicity or acuteness; use only what is stated in the research goal or findings.
+c. The rationale for selecting a category from </pain_or_treatment_types> is to determine whether the article discusses social group differences in this specific pain type. The type should only be chosen if this criterion is explicitly met. For example, if research finding states, "Specific hormone regimens (e.g., estradiol valerate/dienogest, extended-cycle vaginal ring contraception) can reduce headache and aura frequency in women with MRM and MwA," this is not a comparison, as it only reports benefits in women without comparing outcomes between women and men. For findings like this, do not code a pain type related to social group differences.
+</notes_for_pain_or_treatment_types>
+
+<aspect_types>
+- INC: pain incidence, only code this if the paper includes this key word.
+- PR: pain prevalence, only code this if the paper includes this key word.
+- TH: pain thresholds or pain tolerance.
+- INT: pain intensity or pain severity
+- DU: pain duration
+- FN: pain-related function (e.g., ability to walk; disability; return to work)
+- RX: pain medication prescription (e.g., yes/no, or type of Rx). For example, if the paper discusses "opioid" or "medication" or "drug" or "medicine", it might be related to RX.
+- DO: the dosage of Rx. For example, if the paper discusses specific dose/dosage of medication, code DO.
+- SP: surgery or other procedure (e.g., knee replacement, hip replacement, abdominal surgery, steroid injections).
+- TT: other treatment types (e.g., herbal remedies, physical therapy, music therapy, complementary and alternative treatments).
+- OT: other, for aspects that do not fall into any of the above categories (e.g., pain coping, pain beliefs, access to pain care). Pain-related mental health (e.g., depression) and pain assessment and diagnosis should be coded as OT.
+</aspect_types>
+
+<social_dimensions_types>
+- AGE: Age (e.g., comparisons between younger adults and older adults or changes in pain with increasing age).
+- SEX: Gender or biological sex (or both).
+- RAC: Race and/or ethnicity (e.g., comparisons between White and Black individuals, or between cultural or ethnic groups like Miao vs. others).
+- SES: Socioeconomic status (e.g., comparisons by education, income, occupation, or wealth).
+- INS: Health insurance status (e.g., insured vs. uninsured).
+- WCG: Within-country geographic comparison (e.g., rural vs. urban, or neighborhood-level comparisons).
+- CCG: Cross-country or large geographic comparisons (e.g., European countries vs. the U.S. or continent-level comparisons).
+- OTH: Other social dimensions not listed above.
+</social_dimensions_types>
+
+<mechanism_types>
+- BG: Biological genetic mechanisms (e.g., genes). Common in papers on gender/sex differences.
+- BH: Biological hormonal mechanisms (e.g., testosterone, estrogen). Common in papers on gender/sex/sexuality differences.
+- BN: Biological neurophysiology (e.g., brain differences, μ-opioid receptors). Common in papers on gender/sex or age differences.
+- BO: Other or unspecified biological factors (e.g., comorbidity, inflammation system, immune system, antibody responses). Common in papers on gender/sex or racial/ethnic differences
+- SC: Sociocultural factors (e.g., lifestyles, reporting differences). Common in papers on race/ethnicity, SES, age, sex/gender differences. Examples: lifestyle differences (e.g., Miao ethnicity has distinct diets compared to other groups); reporting differences (e.g., women report pain more often than men due to social norms).
+- PS: Psychosocial factors (e.g., stress, mental health). Common in papers on race/ethnicity, SES, sex/gender differences.  Example: studies show higher stress or depression among Black individuals compared to White individuals.
+- PF: Provider factors (e.g., treatment decisions, bias).  Common in papers on gender/sex/sexuality or race/ethnicity differences.  Example: physician bias leads to different opioid prescription rates for non-White vs. White patients.
+- HS, health system factors (e.g., lack of health insurance, lack of affordable or accessible healthcare, or lack of translators in hospitals). Common in papers on rural/urban, cross-country, or racial/ethnic differences.
+- EN, other macro-level environmental (sociostructural) factors (e.g., geographic contexts, health policies, local opioid availability, racism, neighborhood factors, or other structural social factors other than health systems factors).
+- OT, other (explain in the parenthesis) (Anything that does not fall into any of the categories above)
+- NA, if no mechanisms were discussed in the paper.
+</mechanism_types>
+
+<output_format>
+Save your output in JSON with the following format and organize it by each research result:
+{
+  "research_finding_1":
+  {
+    "research_finding": "research finding summary in one sentence which should be specific and only focused on one objective with dependent and independent variables clearly specified",
+    "pain_or_treatment_type": "select one value from <pain_or_treatment_types>",
+    "aspect_type": "select one value from <aspect_types>",
+    "social_dimensions_type": "select one value from <social_dimensions_types>",
+    "mechanism_type": "select one value from <mechanism_types>",
+  },
+  "research_finding_2":
+  {
+    "research_finding": "research finding summary in one sentence which should be specific and only focused on one objective with dependent and independent variables clearly specified",
+    "pain_or_treatment_type": "select one value from <pain_or_treatment_types>",
+    "aspect_type": "select one value from <aspect_types>",
+    "social_dimensions_type": "select one value from <social_dimensions_types>",
+    "mechanism_type": "select one value from <mechanism_types>",
+  },
+  ...
+}
+</output_format>
+
+<article_to_analyze>
+{pdf_text}
+</article_to_analyze>
+
+Your research findings in JSON:
